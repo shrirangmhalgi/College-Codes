@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>The Green Roof</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        
+        <script type="text/javascript"> 
+            function validate()
+        {
+            var x= document.forms["myForm"]["username"].value;
+            var y= document.forms["myForm"]["password"].value;
+	    var z=y.length;
+            if(x ==="" || y==="")
+            {
+                alert("All fields must be specified");
+                return false;
+            }
+          
+                        if(z<=8)
+            {
+                alert("Password length short");
+                return false;
+            }
+	    if(x ==="use" || y==="password123")
+            {
+                alert("Successfull");
+                return true;
+            }
+        }
+        
+        function myfunction1(image){
+            var middleimage=document.getElementById("middle").src;
+            var imagesrc=image.src;
+            
+            var temp=imagesrc;
+            image.src=middleimage;
+            document.getElementById("middle").src=temp;
+            
+        }
+    </script>
+    </head>
+
+    <body>
+        <div class="background">
+            
+            <div class=header>
+<center>
+<h1 style="font-size:50px; align:center; color:seagreen">
+The Green Roof 
+</h1>
+</center>
+</div>
+            
+        <div>
+            <ul>
+   
+                <li class="floatleft"><a href="index1.html">Home</a></li>
+                <li class="floatleft"><a href="index1.html">Contact</a></li>
+                <li class="floatleft"><a href="index1.html">About</a></li>
+                <li class="floatleft"><a href="index1.html">News</a></li>
+
+            </ul>
+        </div>
+        
+        
+        
+        
+        <div class="row">
+ 
+<div class="column" style="background-transparent">
+ <div class="floatleft">
+        <img onclick="myfunction1(this)" class="image1" src="img1.jpg">
+        <img onclick="myfunction1(this)" class="image2" src="img2.jpg"><br>
+        <img onclick="myfunction1(this)" id="middle" class="image3" src="img3.jpg">
+        <img onclick="myfunction1(this)" class="image4" src="img4.jpg" height="80"><br>
+        <img onclick="myfunction1(this)" class="image5" src="img5.jpg" height="80">
+</div>
+</div>
+            
+            
+    <div class="column" style="background-transparents">
+     
+            <form name="myForm" class="divform floatright" onsubmit="return validate()">
+                Username: <input type="text" name="username" placeholder="Enter Username">
+                Password: <input type="password" name="password" placeholder=" Enter Password">
+                <div class="container">
+                <div class="button1">
+                   <input type="submit" value="RESET" onsubmit="return validate()">
+                </div>
+                   <div class="button2">
+                   <input type="submit" value="Login">
+                </div>
+                </div>
+            </form>
+        
+       
+        </div>
+      
+       
+        </div>
+         <div class="row vid">
+            <div class="floatright">
+            <video height="300" width="300" controls>
+            <source src="mov_bbb.ogg" type="video/ogg">
+            </video>
+            </div>
+        </div>
+
+
+
+
+<div class="para">
+
+<p>
+<span style="font-size:25px">We provide delicious and tasty dishes with quick service .</span> <br>
+     </p>
+</div>   
+        
+                <div>
+            <div class="zoom inorder">
+            <a href="twitter.com"><img class="resize " src="Twitter.png" alt="Twitter"></a>
+            </div>
+            <div class="inorder zoom">
+            <img class="resize" src="Facebook.png" alt="Facebook">
+                </div>
+            <div class="inorder zoom">
+            <img class="resize" src="Linkedin.png" alt="Linkedin">
+            </div>
+            <div class="inorder zoom">
+            <img class="resize" src="Pinterest.png" alt="Pinterest">
+            </div>
+        </div>
+        
+       
+
+     
+        
+        
+        
+      </div>
+        
+
+       <footer class="Footer"><center>
+  <p>Copyright © Lifestyle Store. All Rights Reserved</p></center>
+</footer>
+
+    </body>
+</html>
