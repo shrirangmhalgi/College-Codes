@@ -7,19 +7,39 @@
          Hello! What is your name?
       </template>
       
-      </category>
+	</category>
+
+	<category>
+      <pattern> Hi </pattern>
       
-      <category>
+      <template>
+         Hello! What is your name?
+      </template>
       
-      <pattern>My name is *</pattern>
+	</category>
+    
+<category>
+      <pattern> Hey </pattern>
+      
+      <template>
+         Hello! What is your name?
+      </template>
+      
+	</category>
+    
+
+
+    <category>
+      
+      <pattern>MY NAME IS *</pattern>
       <pattern>*</pattern>
       <template>
-            Hi,<set name="username"><star/>!</set>
+            Hi,<set name="username"><star/></set> how may I help you ?
       </template>
    </category>
    
    <category>
-   	<pattern>BYE <name="username"> </pattern>
+   	<pattern>BYE <name="username"></pattern>
    	<template>
    	<srai>BYE</srai>
    	</template>
@@ -49,9 +69,13 @@
    	<pattern>BUSINESS</pattern>
    	<template>
    		<random>
-   		<li>Stocks and Shares</li>
-   		<li>Forex Trading</li>
-   		<li>Money Market Funds</li>
+   		<li>High risk brings high rewards You might look at Stocks and Shares</li>
+   		<li>Intra Day Trading seems to be an option for you</li>
+   		<li>Your Money might earn you good rewards in Mutual Funds</li>
+<!-- 
+   		<li>High risk, high rewards !! You might look at Stocks and Shares. </li>
+   		<li>Intra Day Trading seems to be an option for you. </li>
+   		<li>Your Money might earn you good rewards in Market Funds. Here's a suggestion: Mutual Fund investments are subject to market risks. Please read all scheme related documents carefully. </li> -->
    		</random>
    	</template>
    </category>
@@ -60,10 +84,10 @@
    	<pattern>STUDENT</pattern>
    	<template>
    		<random>
-   		<li>Open a brokerage account for day-trading</li>
-   		<li>Long term Mutual or Index Funds</li>
-   		<li>Bond Investments</li>
-   		<li>Buy investment property</li>
+   		<li>Open a brokerage account for long-term investments</li>
+   		<li>Savings account seems a good option</li>
+   		<li>Post-Office Investment</li>
+   		<li>IPO's are in boom</li>
    		</random>
    	</template>
    </category>
@@ -71,17 +95,75 @@
    <category>
    	<pattern>SAVINGS</pattern>
    	<template>
-   		<random>
+Here's some Information:
+Private banks offer interest at 4% per annum
+Government banks offer 6% to 7% interests
+Small scale banks offer interests upto 10% per annum
+   		<!-- <random>
    		<li>Direct Equity</li>
    		<li>Equity Mutual Funds</li>
    		<li>National Pension System</li>
    		<li>Fixed Deposits</li>
    		<li>Real Estate</li>
    		<li>Gold</li>
-   		</random>
+		<li>Currency Trading</li>
+   		</random> -->
    	</template>
    </category>   
+
+   <category>
+   	<pattern>_ STOCK AND SHARES</pattern>
+   	<template><srai>STOCK AND SHARES</srai></template>
+   </category>
    
+   <category>
+   	<pattern>STOCK AND SHARES *</pattern>
+   	<template><srai>STOCK AND SHARES</srai></template>
+   </category>
+   
+   <category>
+   	<pattern>_ STOCK AND SHARES *</pattern>
+   	<template><srai>STOCK AND SHARES</srai></template>
+   </category>
+
+   <category>
+   	<pattern>STOCK AND SHARES</pattern>
+   	<template>
+   		<random>
+   		<li>TCS is in a great BOOM </li>
+   		<li>MRF or Eicher motors or PAGE industries are some of the top stocks. </li>
+   		</random>
+   	</template>
+   </category>
+
+<!-- this is -->
+<category>
+   	<pattern>_ SAVING ACCOUNT</pattern>
+   	<template><srai>SAVINGS ACCOUNT</srai></template>
+   </category>
+   
+   <category>
+   	<pattern>SAVING ACCOUNT *</pattern>
+   	<template><srai>SAVINGS ACCOUNT</srai></template>
+   </category>
+   
+   <category>
+   	<pattern>_ SAVING ACCOUNT *</pattern>
+   	<template><srai>SAVINGS ACCOUNT</srai></template>
+   </category>
+
+	<category>
+   	<pattern>SAVINGS ACCOUNT</pattern>
+   	<template>
+   		<random>
+   		<li>Private banks offer interest at 4% per annum. </li>
+   		<li>Government banks offer 6% to 7% interests. </li>
+		<li>Small scale banks offer interests upto 10% per annum. </li>
+   		</random>
+   	</template>
+   </category>
+   <!-- khatam -->
+
    <category>
    	<pattern>_ BUSINESS</pattern>
    	<template><srai>BUSINESS</srai></template>
@@ -129,7 +211,7 @@
 
    <category>
    	<pattern>BYE</pattern>
-   	<template>Bye, <get name="username">!</get></template>
+   	<template>Bye, <get name="username"> have a nice day!!</get></template>
    </category>
    
 </aiml>

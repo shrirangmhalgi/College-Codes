@@ -1,13 +1,21 @@
 0,HELLO,*,*,Hello! What is your name?,test.aiml
-0,*,*,*,Hi#Comma<set name="username"><star/>!</set>,test.aiml
+0,Hi,*,*,Hello! What is your name?,test.aiml
+0,Hey,*,*,Hello! What is your name?,test.aiml
+0,*,*,*,Hi <set name="username"><star/></set>#Comma how may I help you ?,test.aiml
 0,BYE *,*,*,<srai>BYE</srai>,test.aiml
 0,_ INVESTMENT,*,*,<srai>INVESTMENT</srai>,test.aiml
 0,INVESTMENT *,*,*,<srai>INVESTMENT</srai>,test.aiml
 0,_ INVESTMENT *,*,*,<srai>INVESTMENT</srai>,test.aiml
 0,INVESTMENT,*,*,What is your occupation?,test.aiml
-0,BUSINESS,*,*,<random>#Newline   		<li>Stocks and Shares</li>#Newline   		<li>Forex Trading</li>#Newline   		<li>Money Market Funds</li>#Newline   		</random>,test.aiml
-0,STUDENT,*,*,<random>#Newline   		<li>Open a brokerage account for day-trading</li>#Newline   		<li>Long term Mutual or Index Funds</li>#Newline   		<li>Bond Investments</li>#Newline   		<li>Buy investment property</li>#Newline   		</random>,test.aiml
-0,SAVINGS,*,*,<random>#Newline   		<li>Direct Equity</li>#Newline   		<li>Equity Mutual Funds</li>#Newline   		<li>National Pension System</li>#Newline   		<li>Fixed Deposits</li>#Newline   		<li>Real Estate</li>#Newline   		<li>Gold</li>#Newline   		</random>,test.aiml
+0,BUSINESS,*,*,<random>#Newline   	    <li>High risk brings high rewards You might look at Stocks and Shares</li>#Newline   		<li>Intra Day Trading seems to be an option for you</li>#Newline   		<li>Your Money might earn you good rewards in Mutual Funds</li>#Newline  		</random>,test.aiml
+0,STUDENT,*,*,<random>#Newline   		<li>Open a brokerage account for long-term investments</li>#Newline   		<li>Savings account seems a good option</li>#Newline      		<li>Post-Office Investment pay a good amount</li>#Newline  		</random>,test.aiml
+0,SAVINGS,*,*,Here's some Information: #Newline Private banks offer interest at 4% per annum #Newline Government banks offer 6% to 7% interests #Newline Small scale banks offer interests upto 10% per annum #Newline   		,test.aiml
+0,_ STOCK AND SHARES,*,*,<srai>STOCK AND SHARES</srai>,test.aiml
+0,STOCK AND SHARES *,*,*,<srai>STOCK AND SHARES</srai>,test.aiml
+0,_ STOCK AND SHARES *,*,*,<srai>STOCK AND SHARES</srai>,test.aiml
+0,_ SAVING ACCOUNT,*,*,<srai>SAVINGS ACCOUNT</srai>,test.aiml
+0,SAVING ACCOUNT *,*,*,<srai>SAVINGS ACCOUNT</srai>,test.aiml
+0,_ SAVING ACCOUNT *,*,*,<srai>SAVINGS ACCOUNT</srai>,test.aiml
 0,_ BUSINESS,*,*,<srai>BUSINESS</srai>,test.aiml
 0,BUSINESS *,*,*,<srai>BUSINESS</srai>,test.aiml
 0,_ BUSINESS *,*,*,<srai>BUSINESS</srai>,test.aiml
@@ -17,4 +25,4 @@
 0,_ SAVINGS,*,*,<srai>SAVINGS</srai>,test.aiml
 0,SAVINGS *,*,*,<srai>SAVINGS</srai>,test.aiml
 0,_ SAVINGS *,*,*,<srai>SAVINGS</srai>,test.aiml
-0,BYE,*,*,Bye#Comma <get name="username">!</get>,test.aiml
+0,BYE,*,*,Bye <get name="username"> </get> #Comma have a nice day!,test.aiml
