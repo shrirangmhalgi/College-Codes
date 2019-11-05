@@ -28,7 +28,7 @@ void parallel_vector_matrix_multiplication(int number_of_threads){
   memset(result, 0, number_of_elements);
 
   double start_time = omp_get_wtime();
-  #pragma omp parallel for collapse(1) num_threads(number_of_threads)
+  #pragma omp parallel for collapse(2) num_threads(number_of_threads)
   for(int i = 0; i < number_of_elements; i++){
     for(int j = 0; j < number_of_elements; j++){
       result[i] += vector1[i] * matrix1[i][j];
