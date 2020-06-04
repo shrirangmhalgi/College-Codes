@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="section-book">
+        <div class="row">
+            <div class="book">
+                <div class="book__form">
+                    <form action="#" class="form">
+                        <div class="u-margin-bottom-medium">
+                            <h2 class="heading-secondary">
+                                SQL Injection Demo
+                            </h2>
+                        </div>
+                        <div class="form__group">
+                            <input id="userName" type="text" class="form__input" placeholder="Username" required="">
+                            <label for="userName" class="form__label">Username</label>
+                        </div>
+                        <div class="form__group">
+                            <input id="password" type="password" class="form__input" placeholder="Password" required="">
+                            <label for="password" class="form__label">Password</label>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn--green" type="button" name="button" onclick="searchDatabase()">Search Database →</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="row" class="row">
+            <div id="results">
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function searchDatabase() {
+            userName = document.getElementById("userName").value
+            password = document.getElementById("password").value
+
+            data = {
+                userName: userName,
+                password: password
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '/SQL_Injection/AuthenticationServlet?action=LoginServlet',
+                data: JSON.stringify(data),
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                traditional: true,
+                success: function(jsonObj) {
+                    statusJson = jsonObj[0]
+                    dataJson = jsonObj[1]
+
+                    table = document.createElement("table")
+                    table.border = "1"
+
+                    row = table.insertRow(-1);
+                    headerCell = document.createElement("th");
+                    headerCell.innerHTML = "User Name";
+                    row.appendChild(headerCell);
+
+                    headerCell = document.createElement("th");
+                    headerCell.innerHTML = "Password";
+                    row.appendChild(headerCell);
+
+                    tableBody = document.createElement("tbody");
+
+                    for (i = 0; i < dataJson.length; i++) {
+                        row = document.createElement("tr");
+
+                        cell = document.createElement("td");
+                        cellText = document.createTextNode(dataJson[i].userName);
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+
+                        cell = document.createElement("td");
+                        cellText = document.createTextNode(dataJson[i].password);
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+
+                        tableBody.appendChild(row);
+                    }
+
+                    table.appendChild(tableBody);
+                    document.getElementById("results").appendChild(table)
+                },
+                error: function() {
+                    alert("Failure")
+                }
+            });
+
+
+        }
+    </script>
+</body>
+
+</html>

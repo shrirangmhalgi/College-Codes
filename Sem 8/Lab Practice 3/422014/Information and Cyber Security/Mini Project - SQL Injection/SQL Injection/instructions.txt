@@ -1,0 +1,2 @@
+put the following characters in password section to retrieve all the values from user profile
+" or 1 = 1; #
